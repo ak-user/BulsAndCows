@@ -12,3 +12,4 @@ using namespace std;
 void PrintIntro();
 string GetGuess();
 void PlayGame();
+bool AskToPlayAgain();

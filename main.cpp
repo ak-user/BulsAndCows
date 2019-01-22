@@ -9,6 +9,7 @@ int main()
 {
     PrintIntro();
     PlayGame();
+    AskToPlayAgain();
     return 0; // exit the application
 }
 
@@ -41,4 +42,13 @@ string GetGuess()
     string Guess;
     getline(cin, Guess);
     return Guess;
+}
+
+bool AskToPlayAgain()
+{
+    cout << "Do you want to play again ? Please press Yes (y) or No (n): ";
+    string Responce;
+    getline(cin, Responce);
+
+    return (Responce[0] == 'y') || (Responce[0] == 'Y');
 }
