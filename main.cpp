@@ -23,25 +23,22 @@ void PrintIntro()
     cout << endl;
 }
 
-string GetGuessAndPrintBack()
-{
-    // get a guess from the player
-    cout << "Enter the name: ";
-
-    string Guess;
-    getline(cin, Guess);
-
-    // print the guess back to them
-    cout << "Your guess was: " << Guess << endl;
-    cout << endl;
-    return Guess;
-}
-
 void PlayGame()
 {
     // loop for the number of turns asking for guesses
     constexpr int NUMBERS_OF_TURNS = 5;
     for (int i = 0; i < NUMBERS_OF_TURNS; i++ ) {
-        GetGuessAndPrintBack();
+        string Guess = GetGuess();
+        cout << "Your guess was: " << Guess << endl;
+        cout << endl;
     };
+}
+
+string GetGuess()
+{
+    // get a guess from the player
+    cout << "Enter the name: ";
+    string Guess;
+    getline(cin, Guess);
+    return Guess;
 }

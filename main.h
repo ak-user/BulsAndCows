@@ -10,5 +10,5 @@
 using namespace std;
 
 void PrintIntro();
-string GetGuessAndPrintBack();
+string GetGuess();
 void PlayGame();
